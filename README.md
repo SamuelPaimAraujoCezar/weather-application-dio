@@ -1,27 +1,56 @@
-# WeatherApplication
+~~~markdown
+# Weather Application 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/SamuelPaimAraujoCezar/weather-application-dio/blob/master/LICENSE) 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+## Sobre o projeto
 
-## Development server
+[Weather Application Live](https://weather-application-samuel.netlify.app)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Weather Application é uma aplicação front-end construída durante o bootcamp Avanade Angular Developer, evento organizado pela [Digital Innovation One](https://web.digitalinnovation.one).
 
-## Code scaffolding
+A aplicação consiste em mostrar o clima de uma determinada cidade que foi pesquisada, podendo adicionar essa cidade aos favoritos e também ver os detalhes do clima dessa cidade, com o clima atual e sua previsão para a proxima semana.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Layout web
+![Web 1](https://github.com/SamuelPaimAraujoCezar/weather-application-dio/blob/master/src/assets/img/raw/weather/web1.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![Web 2](https://github.com/SamuelPaimAraujoCezar/weather-application-dio/blob/master/src/assets/img/raw/weather/web2.png)
 
-## Running unit tests
+![Web 3](https://github.com/SamuelPaimAraujoCezar/weather-application-dio/blob/master/src/assets/img/raw/weather/web2.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+# Tecnologias utilizadas
+## Back end
+- [Open Weather Map API](https://openweathermap.org)
+## Front end
+- HTML / SCSS / TypeScript
+- Angular
+- Angular Material
+- NgRx
+- moment-timezone
+## Implantação em produção
+- Front end web: Netlify
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Como executar o projeto
 
-## Further help
+## Front end web
+Pré-requisitos: npm
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+# clonar repositório
+git clone https://github.com/SamuelPaimAraujoCezar/weather-application-dio.git
+
+# instalar dependências
+npm install
+
+# executar o projeto
+npm start | ng serve
+```
+
+# Autor
+
+Samuel Paim Araújo Cezar
+
+https://www.linkedin.com/in/samuel-paim-araujo-cezar/
+~~~
+

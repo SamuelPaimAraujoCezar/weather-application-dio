@@ -1,0 +1,36 @@
+<div class="weather-details">
+    <ng-container *ngIf="!(loading$ | async) && !(error$ | async) && !!(details$ | async)">
+        <mat-card class="margin10 current-weather-card">
+            <mat-card-header>
+                <mat-card-title class="current-city">
+                    {{ (details$ | async).city.name }}, {{ (details$ | async).city.country }}
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <wea-detailed-weather [unit]="unit$ | async" [weather]="(details$ | async).current"></wea-detailed-weather>
+            </mat-card-content>
+        </mat-card>
+
+        <wea-daily-weather *ngFor=" let daily of (details$ | async).daily" 
+                            [unit]="unit$ | async" 
+                            [dailyWeather]="daily" 
+                            [timeZone]="(details$ | async).city.timeZone">
+        </wea-daily-weather>
+    </ng-container>
+
+    <div class="wrapper" *ngIf="loading$ | async">
+        <mat-spinner diameter="40"></mat-spinner>
+    </div>
+
+    <div class="try-again" *ngIf="error$ | async">
+        <div class="error-message">
+            <mat-icon class="icon">error</mat-icon>
+            <h2>Erro ao tentar carregar detalhes</h2>
+            <mat-icon class="icon">error</mat-icon>
+        </div>
+        <a (click)="tryAgain()">
+            <mat-icon>restart_alt</mat-icon>
+            <span>Tentar novamente</span>
+        </a> 
+    </div>
+</div>

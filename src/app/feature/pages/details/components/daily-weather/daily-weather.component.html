@@ -1,0 +1,19 @@
+<mat-card class="margin10 daily-weather-card">
+    <mat-card-header>
+        <mat-card-title>{{ date | uppercase }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="weather-info">
+        <mat-list>
+            <mat-list-item [title]="weather.description"> <img [src]="icon" alt="Weather Logo"> </mat-list-item>
+        </mat-list>
+        <mat-list class="weather-temp">
+            <mat-list-item class="temp-item temp-k">{{ weather.minTemp }} {{ getUnit }} - {{ weather.maxTemp }} {{ getUnit }}</mat-list-item>
+            <mat-list-item class="temp-item">Humidade: {{ weather.humidity }}%</mat-list-item>
+            <mat-list-item class="temp-item">Velocidade do vento: {{ weather.wind.speed }} m/s</mat-list-item>
+        </mat-list>
+        <mat-list class="weather-sun">
+            <mat-list-item class="sun-item">Nascer do sol: {{ unixToHourMinute(weather.sunrise) }}</mat-list-item>
+            <mat-list-item class="sun-item">Pôr do sol: {{ unixToHourMinute(weather.sunset) }}</mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>

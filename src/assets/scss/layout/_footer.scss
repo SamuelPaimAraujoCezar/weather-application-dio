@@ -1,0 +1,33 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    justify-content: flex-end;
+
+    > .footer-title {
+        padding-bottom: 6px;
+        margin-right: 20px;
+        font-size: 20px;
+        color: white;
+    }
+
+    > .footer-icon {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+
+
+        > .footer-title {
+            font-size: 15px;
+            margin-right: 10px;
+        }
+
+        > .footer-icon {
+            margin-right: 5px;
+        }
+    }
+}

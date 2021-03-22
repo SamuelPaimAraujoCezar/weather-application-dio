@@ -1,0 +1,52 @@
+#navbar-portal-outlet {
+    margin: -16px;
+    margin-bottom: 10px;
+    width: calc(100% + 32px);
+}
+
+.weather-search {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+
+    > .search-card {
+        width: calc(100% - 52px);
+    }
+
+    > .wrapper {
+        display: inline-block;
+        padding: 2% 42%;
+    }
+
+    > .try-again {
+        margin: 1% 38%;
+
+        > a {
+            display: inline-flex;
+            cursor: pointer;
+
+            > span {
+                padding-top: 4px;
+                padding-left: 2px;
+            }
+        }
+    }
+}
+
+.icon-button {
+    display: flex;
+    float: left;
+    margin-top: 6px;
+    margin-left: 10%;
+    padding-left: 5%;
+
+    :hover {
+        color: #616161;
+    }
+}
+
+@media (max-width: 800px) {
+    .width50 {
+        width: 100%;
+    }
+}

@@ -1,0 +1,27 @@
+.units {
+    display: flex;
+    flex-direction: row;
+    margin-top: -10px;
+}
+
+.unit {
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-right: -10px;
+    cursor: pointer;
+}
+
+.checked {
+    background: #616161;
+    color: white;
+}
+
+.not-checked {
+    background: #E0E0E0;
+}
+
+.checked:hover, 
+.not-checked:hover {
+    background: #424242;
+}

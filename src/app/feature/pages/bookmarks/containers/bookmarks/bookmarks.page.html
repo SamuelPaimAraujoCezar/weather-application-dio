@@ -1,0 +1,30 @@
+<div class="bookmarks">
+    <mat-card class="width50 margin10">
+        <mat-card-header>
+            <mat-card-title>Favoritos</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list>
+                <matlist-item *ngIf="!bookmarks.length" class="none">Nenhum favorito adicionado</matlist-item>
+                <matlist-item *ngFor="let bookmark of bookmarks" class="bookmark-list">
+                    <div class="bookmark-content">
+                        <a class="bookmark-item" [routerLink]="['../details']"
+                            [queryParams]="{ lat: bookmark.coord.lat, lon: bookmark.coord.lon }">
+                            <span>{{ bookmark.name }}, {{ bookmark.country }}</span>
+                        </a>
+                        <button mat-icon-button (click)="removeBookmark(bookmark.id)">
+                            <mat-icon>do_not_disturb_on</mat-icon>
+                        </button>
+                    </div>
+                </matlist-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="width50 margin10 add-bookmarks-card">
+        <div class="padding10">
+            <wea-cities-typeahead   titulo="Adicionar cidade aos favoritos" 
+                                    [formControl]="searchControlWithAutocomplete">
+            </wea-cities-typeahead>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,45 @@
+<mat-toolbar color="warn" id="navbar-portal-outlet">
+    <wea-unit-selector (resetSearch)="resetSearch()"></wea-unit-selector>
+</mat-toolbar>
+
+<div class="weather-search">
+    <mat-card class="float-left margin10 search-card">
+        <div class="float-left width50">
+            <mat-form-field class="float-left width75">
+                <input  matInput placeholder="Pesquisar" [formControl]="searchControl">                
+            </mat-form-field>
+            <div class="float-left width25">
+                <button mat-icon-button [disabled]="searchControl.invalid" class="icon-button" (click)="doSearch()">
+                    <mat-icon class="icon">search</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div class="float-left width50">
+            <wea-cities-typeahead   titulo="Pesquisar com autocomplete" 
+                                    [formControl]="searchControlWithAutocomplete">
+            </wea-cities-typeahead>
+        </div>
+    </mat-card>
+
+    <div class="wrapper" *ngIf="loading$ | async">
+        <mat-spinner diameter="40"></mat-spinner>
+    </div>
+
+    <div *ngIf="!(loading$ | async) && !(error$ | async) && !!cityWeather">
+        <wea-current-weather    [unit]="unit$ | async" [cityWeather]="cityWeather" 
+                                [bookmarkOption]="bookmarkOption" (toggleBookmark)="onToggleBookmark()">           
+        </wea-current-weather>
+    </div>
+
+    <div class="try-again" *ngIf="error$ | async">
+        <a (click)="resetSearch()">
+            <mat-icon>restart_alt</mat-icon>
+            <span>Tentar novamente</span>
+        </a> 
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,23 @@
+<div>
+    <mat-list class="units">
+        <mat-list-item>Unidade:</mat-list-item>
+        <mat-list-item>
+            <a (click)="updateUnit(unitsEnum.Metric)" class="unit"  
+                [ngClass]="(unit$ | async) === unitsEnum.Metric ? 'checked' : 'not-checked'">
+                °C
+            </a>
+        </mat-list-item>
+        <mat-list-item>
+            <a (click)="updateUnit(unitsEnum.Imperial)" class="unit" 
+                [ngClass]="(unit$ | async) === unitsEnum.Imperial ? 'checked' : 'not-checked'">
+                °F
+            </a>
+        </mat-list-item>
+        <mat-list-item>
+            <a (click)="updateUnit(unitsEnum.SI)" class="unit"  
+                [ngClass]="(unit$ | async) === unitsEnum.SI ? 'checked' : 'not-checked'">
+                K
+            </a>
+        </mat-list-item>
+    </mat-list>
+</div>

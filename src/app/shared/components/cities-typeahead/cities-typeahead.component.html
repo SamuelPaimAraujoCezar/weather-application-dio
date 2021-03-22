@@ -1,0 +1,17 @@
+<mat-form-field class="full-width">
+    <input  matInput 
+            [placeholder]="titulo" 
+            [formControl]="searchControl"
+            [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelect($event)">
+            <mat-option disabled *ngIf="loading">
+                <mat-spinner diameter="25"></mat-spinner>
+            </mat-option>
+
+            <ng-container *ngIf="!loading">          
+                <mat-option *ngFor="let city of (dataSource$ | async)" [value]="city.geonameid">
+                    {{ city.name }}, {{ city.country }}
+                </mat-option>
+            </ng-container>
+          </mat-autocomplete>
+</mat-form-field>

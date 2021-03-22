@@ -1,0 +1,40 @@
+.bookmarks {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    > .add-bookmarks-card {
+        max-height: 60px;
+    }
+}
+
+.none {
+    margin-left: 16px;
+}
+
+.bookmark-list {
+    display: flex;
+    flex-direction: column;
+
+    > .bookmark-content {
+        display: flex;
+        flex-direction: row;
+
+        > .bookmark-item {
+            margin: 10px 0 0 16px;
+            color: black;
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .bookmarks {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .width50 {
+        width: calc(100% - 52px);
+    }
+}

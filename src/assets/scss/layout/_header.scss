@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    align-items: center;
+
+    > .header-logo {
+
+        > a {
+            display: flex;
+
+            > .header-logo {
+                max-height: 48px;
+            }
+        }
+    }
+
+    > .header-title-group {
+        padding-left: 25px;
+
+        > a {
+            display: flex;
+            align-items: center;
+            color: #FFF;
+
+            > .icon {
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header-logo {
+        width: 120px;
+    }
+
+    .header-title-group {
+        margin-left: -15px;
+    }
+}

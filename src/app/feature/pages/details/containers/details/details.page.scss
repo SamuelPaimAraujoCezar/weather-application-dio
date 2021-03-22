@@ -1,0 +1,45 @@
+.weather-details {
+    display: flex;
+    flex-direction: column;
+
+    > .wrapper {
+        display: inline-block;
+        padding: 2% 50%;
+    }
+
+    > .try-again {
+        display: flex;
+        flex-direction: column;
+
+        > .error-message {
+            display: flex;
+            justify-content: center;
+
+            > .icon {
+                padding: 0 2px;
+                padding-top: 4px;
+            }
+        }
+
+        > a {
+            display: inline-flex;
+            justify-content: center;
+            cursor: pointer;
+
+            > span {
+                padding-top: 4px;
+                padding-left: 2px;
+            }
+        }
+    }
+}
+
+
+.current-city {           
+    font-size: 26px;
+    margin-top: 8px;
+}
+
+.current-weather-card {
+    width: calc(100% - 52px);
+}

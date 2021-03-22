@@ -1,0 +1,19 @@
+<mat-card class="margin10 weather-card">
+    <mat-card-header>
+        <mat-card-title class="weather-city">{{ cityName }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <wea-detailed-weather [unit]="unit" [weather]="cityWeather.weather"></wea-detailed-weather>
+    </mat-card-content>
+    <mat-card-actions class="weather-actions">
+        <a class="action" (click)="onToggleBookmark()">
+            <mat-icon>bookmark</mat-icon>
+            <span>{{ bookmarkOption }}</span>
+        </a>
+        <a class="action" routerLink="/details" 
+            [queryParams]="{ lat: cityWeather.city.coord.lat, lon: cityWeather.city.coord.lon }">
+            <mat-icon>feed</mat-icon>
+            <span>Ver detalhes</span>
+        </a>
+    </mat-card-actions>
+</mat-card>

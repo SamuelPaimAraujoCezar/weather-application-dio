@@ -1,0 +1,16 @@
+<div class="weather-details">
+    <mat-list class="weather-icon">
+        <mat-list-item class="icon"> <img [src]="weatherIcon" alt="Weather Icon"> </mat-list-item>
+        <mat-list-item class="desc">{{ weather.description }}</mat-list-item>
+    </mat-list>
+
+    <mat-list class="weather-temp">
+        <mat-list-item class="temp">{{ weather.temp }} {{ getUnit }}</mat-list-item>
+        <mat-list-item class="feels-like">Sensação térmica: {{ weather.feelsLike }} {{ getUnit }}</mat-list-item>
+    </mat-list>
+
+    <mat-list class="weather-misc">
+        <mat-list-item class="item">Humidade: {{ weather.humidity }}%</mat-list-item>
+        <mat-list-item class="item">Velocidade do vento: {{ weather.wind.speed }} m/s</mat-list-item>
+    </mat-list>
+</div>

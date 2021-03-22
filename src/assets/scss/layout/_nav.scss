@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+
+.sidenav {
+    background-color: mat-color(mat-palette($mat-gray, 100));
+    width: 200px;
+}
+
+.sidenav-icon {
+    padding-right: 5px;
+}
+
+.sidenav-content {
+    padding: 16px;
+}
+
+@media (max-width: 600px) {
+    .sidenav {
+        width: 140px;
+    }
+}

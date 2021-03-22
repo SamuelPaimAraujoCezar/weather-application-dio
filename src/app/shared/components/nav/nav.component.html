@@ -1,0 +1,22 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened
+    fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <mat-icon class="sidenav-icon">
+                    home
+                </mat-icon>
+                Início
+            </a>
+            <a mat-list-item routerLink="/bookmarks">
+                <mat-icon class="sidenav-icon">
+                    bookmark
+                </mat-icon>
+                Favoritos
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

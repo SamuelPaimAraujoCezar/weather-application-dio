@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="header mat-elevation-z4">
+    <span class="header-logo">
+        <a routerLink="/">
+            <img class="header-logo" src="assets/img/logo.png" alt="logo">
+        </a>
+    </span>
+    <span class="header-title-group">
+        <a  routerLink="{{ (headerData$ | async).routeUrl }}"
+            [queryParams]="(headerData$ | async).queryParams">
+            <mat-icon class="icon">
+                {{ (headerData$ | async).icon }}
+            </mat-icon>
+            {{ (headerData$ | async).title }}
+        </a>
+    </span>
+</mat-toolbar>

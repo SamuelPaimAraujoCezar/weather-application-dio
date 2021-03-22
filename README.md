@@ -1,4 +1,3 @@
-~~~markdown
 # Weather Application 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/SamuelPaimAraujoCezar/weather-application-dio/blob/master/LICENSE) 
 
@@ -52,5 +51,3 @@ npm start | ng serve
 Samuel Paim Araújo Cezar
 
 https://www.linkedin.com/in/samuel-paim-araujo-cezar/
-~~~
-

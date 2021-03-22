@@ -7,7 +7,7 @@
 
 Weather Application é uma aplicação front-end construída durante o bootcamp Avanade Angular Developer, evento organizado pela [Digital Innovation One](https://web.digitalinnovation.one).
 
-A aplicação consiste em mostrar o clima de uma determinada cidade que foi pesquisada, podendo adicionar essa cidade aos favoritos e também ver os detalhes do clima dessa cidade, com o clima atual e sua previsão para a proxima semana.
+A aplicação consiste em mostrar o clima de uma determinada cidade que foi pesquisada, podendo adicionar essa cidade aos favoritos e também ver os detalhes do clima dessa cidade com o clima atual e sua previsão para a próxima semana.
 
 
 ## Layout web
@@ -15,7 +15,7 @@ A aplicação consiste em mostrar o clima de uma determinada cidade que foi pesq
 
 ![Web 2](https://github.com/SamuelPaimAraujoCezar/weather-application-dio/blob/master/src/assets/img/raw/weather/web2.png)
 
-![Web 3](https://github.com/SamuelPaimAraujoCezar/weather-application-dio/blob/master/src/assets/img/raw/weather/web2.png)
+![Web 3](https://github.com/SamuelPaimAraujoCezar/weather-application-dio/blob/master/src/assets/img/raw/weather/web3.png)
 
 
 # Tecnologias utilizadas
